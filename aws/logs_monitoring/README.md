@@ -49,7 +49,7 @@ There are 3 possibilities to set your Datadog's API key (available in your Datad
 
 1. **KMS Encrypted key (recommended)**: Use the `DD_KMS_API_KEY` environment variable to use a KMS encrypted key. Make sure that the Lambda excution role is listed in the KMS Key user in https://console.aws.amazon.com/iam/home#encryptionKeys.
 2. **Environment Variable**: Use the `DD_API_KEY` environment variable of the Lambda function
-3. **Manual**: Replace `<your_api_key>` in the code: 
+3. **Manual**: Replace `<your_api_key>` in the code:
 
 - **(Optional) Metadata**:
 
@@ -63,11 +63,11 @@ metadata = {
 }
 ```
 
-- **(Optional) Custom Tags** 
+- **(Optional) Custom Tags**
 
 You have two options to add custom tags to your logs:
 
-- Manually by editing the lambda code [there](https://github.com/DataDog/dd-aws-lambda-functions/blob/master/Log/lambda_function.py#L79).
+- Manually by editing the lambda code [there](https://github.com/DataDog/datadog-serverless-functions/blob/master/aws/logs_monitoring/lambda_function.py#L372-#L377).
 - Automatically with the `DD_TAGS` environment variable (tags must be a comma-separated list of strings).
 
 ## 3. (optional) Send logs to EU or to a proxy
